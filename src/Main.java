@@ -33,28 +33,17 @@ public class Main {
 
     private static String padLeft(String s, int number) {
 
-        String result = "";
         int lenght = s.length();
 
-        for (int i = 1; i <= (number - lenght); i++) {
-            result = result + " ";
+        return repeatString(" ",number - lenght) + s;
 
-        }
-
-        return result + s;
     }
 
     private static String padRight(String s, int number) {
 
-        String result = "";
         int lenght = s.length();
 
-        for (int j = 1; j < (number - lenght); j++) {
-            result = result + " ";
-
-        }
-
-        return s + result;
+        return s + repeatString(" ", number - lenght);
     }
 
     private static List<Integer> numbersRange (int a, int b) {
